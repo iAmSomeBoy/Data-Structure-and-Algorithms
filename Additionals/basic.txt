@@ -1,0 +1,10 @@
+// Basic setup
+#include <cstdlib>
+#include <ctime>
+srand(time(0));
+
+// Common patterns
+rand() % 10;           // 0-9
+(rand() % 10) + 1;     // 1-10
+(rand() % 100) + 1;    // 1-100
+(rand() % 51) - 25;    // -25 to 25

@@ -11,7 +11,7 @@ vector<int> generateRandomN(int N, int start, int end){
     return V;
 }
 
-void printList(vector<int> v){
+void printUnsortedList(vector<int> v){
 
     for(int i= 0; i< v.size(); i++){
         cout<<v[i]<<" ";
@@ -19,26 +19,12 @@ void printList(vector<int> v){
     cout<<endl;
 }
 
-void bubbleSort(vector<int> &V, int N){
-    int i, j;
-    for(i =0; i<N ; i++){
-        for(int j = 0; j < N- i- 1; j++){
-            if(V[j] > V[j+1]){
-                swap(V[j], V[j+1]);
-            }
-        }
-    }
-}
-
 int main(){
-    srand(time(0));
+
     vector<int>v;
     v = generateRandomN(50, 10, 90);
-    printList(v);
 
-    bubbleSort(v, 50);
-    cout<<"Result of Bubble Sorting Algorithms\n ";
-    printList(v);
+    printUnsortedList(v);
 
     return 0 ;
 }
