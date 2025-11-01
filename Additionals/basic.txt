@@ -8,3 +8,14 @@ rand() % 10;           // 0-9
 (rand() % 10) + 1;     // 1-10
 (rand() % 100) + 1;    // 1-100
 (rand() % 51) - 25;    // -25 to 25
+
+---------------------------------------------
+---------------------------------------------
+#include <chrono>  // The timing library
+
+auto start = high_resolution_clock::now();    // Start stopwatch
+// Your code to measure goes here
+auto end = high_resolution_clock::now();      // Stop stopwatch
+
+auto duration = duration_cast<milliseconds>(end - start);  // Calculate time in nanosenconds, microseconds etc
+cout << "Time: " << duration.count() << " ms" << endl;     // Print time
