@@ -2,21 +2,6 @@
 #include <vector>
 using namespace std;
 
-void quicksort(vector<int>& arr, int low, int high);
-int partition(vector<int>& arr, int low, int high);
-
-int main() {
-    vector<int> myArray = {64, 34, 25, 12, 22, 11, 90, 5};
-    
-    quicksort(myArray, 0, myArray.size() - 1);
-    
-    cout << "Sorted array: ";
-    for (int i = 0; i < myArray.size(); i++) {
-        cout << myArray[i] << " ";
-    }
-    return 0;
-}
-
 void quicksort(vector<int>& arr, int low, int high) {
     if (low < high) {
         int pivotIndex = partition(arr, low, high);
@@ -24,6 +9,7 @@ void quicksort(vector<int>& arr, int low, int high) {
         quicksort(arr, pivotIndex + 1, high);
     }
 }
+
 
 int partition(vector<int>& arr, int low, int high) {
     int pivot = arr[high];
@@ -41,3 +27,18 @@ int partition(vector<int>& arr, int low, int high) {
     swap(arr[i + 1], arr[high]);
     return i + 1;
 }
+
+int main() {
+    vector<int> myArray = {64, 34, 25, 12, 22, 11, 90, 5};
+    
+    quicksort(myArray, 0, myArray.size() - 1);
+    
+    cout << "Sorted array: ";
+    for (int i = 0; i < myArray.size(); i++) {
+        cout << myArray[i] << " ";
+    }
+    return 0;
+}
+
+
+
