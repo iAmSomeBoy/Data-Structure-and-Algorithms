@@ -1,0 +1,2 @@
+A stable sorting algorithm keeps the same order of equal elements/keys
+in the sorted output as they appear in the given input.

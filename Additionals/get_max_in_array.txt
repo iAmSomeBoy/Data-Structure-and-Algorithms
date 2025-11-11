@@ -1,0 +1,7 @@
+vector<int> v = {4, 7, 2, 9};
+
+cout << max(v.begin(), v.end());     
+// WRONG: compares memory addresses, meaningless result
+
+cout << *max_element(v.begin(), v.end());
+// RIGHT: prints 9
