@@ -31,7 +31,7 @@ vector<int> countingSort(const vector<int>& array) {
     }
 
     return sortedArray;
-}
+} 
 
 int main() {
     vector<int> array = {9, 5, 2, 4, 2, 8, 5};
