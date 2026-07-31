@@ -4,7 +4,7 @@ using namespace std;
 const int MAXN = 10000;
 int n;
 int ara[MAXN];
-int tree[4*MAXN]; // fixed: needs 4*n size, not 1000
+int tree[4*MAXN]; //  needs 4*n size, not 10000
 
 void build(int node, int b, int e) {
     if(b==e) {
@@ -21,7 +21,7 @@ int query(int node, int b, int e, int l, int r) {
     if(r < b || l > e) {
         return INT_MAX; // no overlap
     }
-    if(b >= l && e <= r) { // fixed: was r>=e (wrong), should be e<=r
+    if(b >= l && e <= r) { 
         return tree[node]; // total overlap
     }
     int mid = (b+e)/2;
